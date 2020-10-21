@@ -1,53 +1,97 @@
-// number
-var num1 = 10;
-var num2 = 20;
-var sum = num1 + num2;
-console.log(sum);
+// +, -, *, /, ++, --, **
 
-// string
-var str1='문자1';
-var str2=' ';
-var str3='문자2';
-var str = str1+str2+str3;
-console.log(str);
+// // +
+// console.log('10'+2)
+// console.log(10+2)
 
-var a = 'hello';
-var b = 'world';
-console.log(a+b);
-console.log(`${a} ${b}`);
+// const word1 = 'winter'
+// const word2 = 'is'
+// const word3 = 'coming'
+// const word = (word1+' '+word2+' '+word3)
+// console.log(word);
+// console.log(`${word1} ${word2} ${word3}`);
 
-// boolean
-// var temp1=5>4;
-// console.log(temp1);
-// var temp2=5<4;
-// console.log(temp2);
 
-// console.log(Boolean(temp1))
+// // %(나머지 연산자)
+// const a =100
+// const b =10
+// console.log(a/b);
+// console.log(100/10);
+// console.log(a%b);
+// console.log(5%2);
 
-// undefined
-var temp1=10
-var temp2
-console.log(temp1)
-console.log(temp2)
 
-// object
-var obj={
-  name:'장길산',
-  age:null
-}
-obj.name='홍길동'
-obj.age=30
+// // ++,--
+// var score=10
+// ++score   //잘안씀
+// score++
+// console.log(score);
 
-console.log(obj.name)
-console.log(obj.age)
+// let number = 10
+// console.log(number)
+// number++
+// console.log(number)
+// number--
+// console.log(number)
 
-// typeof
-var num=10
-var str='문자'
-console.log(typeof num)
-console.log(typeof str)
 
-console.log(`값은 ${num} 이고 ${typeof num}입니다`)
-console.log(`값은 ${str}이고 ${typeof str}입니다`)
+// let num1 = 10
+// let num2 = ++num1
+// console.log(num1, num2)
 
-console.log('값은 '+10+'이고 '+typeof num+'입니다')
+// let count1 = 10
+// let count2 = count1++
+// console.log(count1, count2);
+
+
+// // 대입연산자
+// let x=10
+// let y=5
+// x=x+y    // x+=y
+// console.log(x);
+
+// x=x-y    //x-=y
+// console.log(x);
+
+// x=x*y   //x*=y
+// console.log(x);
+
+// x=x/y  //x/=y
+// console.log(x);
+
+// x=x%y  //x%=y
+// console.log(x);
+
+
+// //비교연산자(>, <, >=, <=, ==, !=, ===, !==)
+// let c='5'
+// let d=5
+// console.log(c>d);
+// console.log(c<d);
+// console.log(c!==d);
+// // console.log(c===d);
+
+
+
+// &&(and연산자) ||(or연산자) !(not연산자)
+let a=100>10  //true
+let b= 10<5   //false
+let c=true  //true
+
+// || 1개만 참이여도 참으로 인식
+console.log(a||b||c);
+
+// &&는 모두가 참이여야 참으로 인식
+console.log(a&&b&&c);
+
+b=!b
+console.log(b);
+
+b=!b
+console.log(b);
+
+
+// 삼항 연산자 (조건 ? 값1 : 값2)
+const age =15
+console.log(age > 20 ? '성인입니다' : '청소년');
+
