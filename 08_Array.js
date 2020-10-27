@@ -93,4 +93,11 @@ console.log(books)
 // -두개의 배열을 합치기 concat
 const books2 = ['git', 'nodejs']
 const newBook = books.concat(books2)
-console.log(newBook);
+console.log(newBook)
+
+// 5. 검색
+console.clear()
+console.log(books)
+console.log(books.indexOf('react'))
+console.log(books.includes('css'))
+console.log(books.includes('github'))
