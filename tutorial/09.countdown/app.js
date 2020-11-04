@@ -50,7 +50,7 @@ const times = [ days, hours, minutes, seconds ]
 function addZero(i){
   if (i < 10){
     return(i =`0${i}`)
-  }else{
+  } else {
     return i
   }
 
@@ -59,13 +59,14 @@ function addZero(i){
 // clocks.forEach(함수)
 // 매개변수 하나일땐 괄호생략 가능하지만 두개일땐 괄호필수,인덱스 불러올 수 있음
 clocks.forEach((item, index) => {
-item.innerHTML = addZero (item[index])
+  item.innerHTML = addZero (times[index])
 })
 
+
 if( t < 0){
-  clearInterval(timer)
-  countDown.innerHTML = `<h3>수고하셨습니다<h3>`
-}
+    clearInterval(timer)
+    countDown.innerHTML = `<h3>수고하셨습니다<h3>`
+  }
 }
 
 const timer = setInterval(tick, 1000)
