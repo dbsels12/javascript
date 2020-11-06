@@ -1,3 +1,10 @@
+const dimm = document.querySelector('.dimm')
+const modal = document.querySelector('.modal')
+const close = document.querySelector('.close')
+
+
+
+
 function sendMail() {
   // get all data in form and return object
   function getFormData(form) {
@@ -50,17 +57,27 @@ function sendMail() {
     return {data: formData, honeypot: honeypot};
   }
 
-  function handleFormSubmit(event) {  // handles form submit without any jquery
+  function handleFormSubmit(event) {
+    
+
+
+
+    
+    
+    // handles form submit without any jquery
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
     var data = formData.data
 
-    console.log(data)
-
+    // console.log(data)
     if(data.name === ''|| data.email ===''|| data.message ===''){
       alert('이름과 이메일, 내용을 확인하세요!')
       return
+    }else{
+      //dimm과 로딩이 먼저 나타난다.
+      dimm.classList.add('active')
+
     }
 
     // If a honeypot field is filled, assume it was done so by a spam bot.
@@ -76,14 +93,15 @@ function sendMail() {
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-          form.reset()  
-          //성공후 동작
-          const container = document.querySelector('.container')
-          container.classList.add('active')
+          form.reset()
 
-          const close = document.querySelector('.close')
+          //성공후 동작
+          modal.classList.add('active')
+
           close.addEventListener('click',() => {
-            container.classList.remove('active')
+            dimm.classList.remove('active')
+            modal.classList.remove('active')
+            location.reload()
           })
 
         }

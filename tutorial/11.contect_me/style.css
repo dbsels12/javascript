@@ -107,7 +107,20 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  display: none;
+  /* display: none; */
+}
+
+.dimm i {
+  font-size: 60px;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dimm.active {
+  display: block;
 }
 
 .modal {
@@ -133,11 +146,7 @@
   padding: 20px;
 }
 
-.container.active .dimm {
-  display: block;
-}
-
-.container.active .modal {
+.modal.active {
   opacity: 1;
   pointer-events: initial;
 }
