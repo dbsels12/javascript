@@ -69,6 +69,7 @@
   border: 1px solid transparent;
   background: #f2f7f3;
   border-radius: 10px;
+  outline: none;
   color: #99a9af;
 }
 
@@ -92,6 +93,8 @@
   background: #3c8271;
   color: #ffffff;
   padding: 12px 30px;
+  border: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -107,7 +110,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  /* display: none; */
+  display: none;
 }
 
 .dimm i {
@@ -137,6 +140,11 @@
   pointer-events: none;
 }
 
+.modal.active {
+  opacity: 1;
+  pointer-events: initial;
+}
+
 .modal span {
   display: block;
   font-size: 60px;
@@ -144,9 +152,4 @@
 
 .modal p {
   padding: 20px;
-}
-
-.modal.active {
-  opacity: 1;
-  pointer-events: initial;
 }
